@@ -29,12 +29,11 @@ Across all four models, test accuracy stayed close to 50% — none showed a mean
 
 
 ## Notes:
-Stationarity of returns and RSI can be checked via the included is_stationary function (Augmented Dickey-Fuller test)
-Diagnostic plotting functions (overlap_plot, separate_plot) are included for visually inspecting feature behaviour over time
-All models are saved with their test accuracy in the filename for easy comparison across runs
-Limitations & Future Work
+- Stationarity of returns and RSI can be checked via the included is_stationary function (Augmented Dickey-Fuller test)
+- Diagnostic plotting functions (overlap_plot, separate_plot) are included for visually inspecting feature behaviour over time
+- All models are saved with their test accuracy in the filename for easy comparison across runs
 
 
-Limitations:
-Only tested on a single ticker/timeframe configuration in this run; results may vary across assets, timeframes, and market regimes
-Feature set is limited to simple technical indicators; incorporating volume, order book, or cross-asset features may reveal different results
+## Limitations:
+- Only tested on a single ticker/timeframe configuration in this run; results may vary across assets, timeframes, and market regimes
+- Feature set is limited to simple technical indicators; incorporating volume, order book, or cross-asset features may reveal different results
