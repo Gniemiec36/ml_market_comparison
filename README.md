@@ -21,9 +21,9 @@ Across all four models, test accuracy stayed close to 50% — none showed a mean
 5. Train/test split — chronological (non-shuffled) 80/20 split to avoid lookahead bias
 6. Normalisation — StandardScaler fit on training data only, applied to both sets
 7. Modelling — four independent approaches trained and evaluated on identical data:
-  - Logistic Regression (scikit-learn)
-  - Random Forest (scikit-learn, 200 estimators, max depth 10)
-  - XGBoost (gradient boosted trees)
+   - Logistic Regression (scikit-learn)
+   - Random Forest (scikit-learn, 200 estimators, max depth 10)
+   - XGBoost (gradient boosted trees)
 8. Custom feed-forward neural network (PyTorch, 4 layers, BCE loss, Adam optimiser)
 9. Evaluation — accuracy and classification report for each model; trained models are serialised with joblib
 
