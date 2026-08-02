@@ -6,14 +6,17 @@ A pipeline for testing whether short term stock price direction can be predicted
 
 
 ## Overview:
+
 This project downloads historical price data via yfinance, engineers a set of technical features and frames the prediction task as binary classification: will the next period's return be positive or negative? Multiple model classes are trained and evaluated on the same train/test split to allow direct comparison.
 
 
-## Result: 
+## Result:
+
 Across all four models, test accuracy stayed close to 50% — none showed a meaningful edge over a coin flip. This is treated as a genuine finding rather than a failure: the features used (rolling mean, rolling standard deviation and RSI) combined with each other do not appear to carry a predictive signal for the direction of the market in the next time period, which is broadly consistent with short term price movements behaving close to a random walk.
 
 
 ## Pipeline:
+
 1. Data acquisition — download OHLC data for a given ticker, period, and interval via yfinance
 2. Returns — compute simple and log returns from closing price
 3. Feature engineering — rolling mean/std of log returns, and RSI (Relative Strength Index), all computed over a configurable window
@@ -29,11 +32,13 @@ Across all four models, test accuracy stayed close to 50% — none showed a mean
 
 
 ## Notes:
+
 - Stationarity of returns and RSI can be checked via the included is_stationary function (Augmented Dickey-Fuller test)
 - Diagnostic plotting functions (overlap_plot, separate_plot) are included for visually inspecting feature behaviour over time
 - All models are saved with their test accuracy in the filename for easy comparison across runs
 
 
 ## Limitations:
-- Only tested on a single ticker/timeframe configuration in this run; results may vary across assets, timeframes, and market regimes
-- Feature set is limited to simple technical indicators; incorporating volume, order book, or cross-asset features may reveal different results
+
+- Only tested on a single ticker/timeframe configuration in this run; results may vary across assets, timeframes and market regimes
+- Feature set is limited to simple technical indicators; incorporating volume, order book or cross-asset features may reveal different results
