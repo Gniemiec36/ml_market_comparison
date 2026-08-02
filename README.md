@@ -24,8 +24,8 @@ Across all four models, test accuracy stayed close to 50% — none showed a mean
    - Logistic Regression (scikit-learn)
    - Random Forest (scikit-learn, 200 estimators, max depth 10)
    - XGBoost (gradient boosted trees)
-8. Custom feed-forward neural network (PyTorch, 4 layers, BCE loss, Adam optimiser)
-9. Evaluation — accuracy and classification report for each model; trained models are serialised with joblib
+   - Custom feed-forward neural network (PyTorch, 4 layers, BCE loss, Adam optimiser)
+8. Evaluation — accuracy and classification report for each model; trained models are serialised with joblib
 
 
 ## Notes:
