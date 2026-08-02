@@ -1,7 +1,5 @@
 # ml_market_comparison
 
-Machine Learning Model Comparison on Stock Data:
-
 A pipeline for testing whether short term stock price direction can be predicted from technical indicators, comparing four modelling approaches: logistic regression, random forest, XGBoost and a custom PyTorch neural network.
 
 
